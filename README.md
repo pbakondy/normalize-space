@@ -10,7 +10,7 @@ $ npm install --save normalize-space
 
 ## Usage
 
-The function first converts any incoming value to string then converts all the whitespaces to a single space.
+The function first converts any incoming value to string then converts all the whitespace characters to a single space.
 
 It works the same way as [XSLT normalize-space()](http://www.saxonica.com/html/documentation/functions/fn/normalize-space.html).
 
