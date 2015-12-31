@@ -23,13 +23,13 @@ test('value to string', function (t) {
 });
 
 test('Node to string', function (t) {
-  var div = document.createElement("div");
-  div.appendChild(document.createTextNode("Test"));
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode('Test'));
 
   t.equal(normalize(div), 'Test', 'convert Node to string');
 
-  var el = document.createElement("p");
-  el.appendChild(document.createTextNode("Test"));
+  var el = document.createElement('p');
+  el.appendChild(document.createTextNode('Test'));
   div.appendChild(el);
 
   t.equal(normalize(div), 'TestTest', 'convert Node to string');
@@ -38,13 +38,13 @@ test('Node to string', function (t) {
 });
 
 test('NodeList to string', function (t) {
-  var el = document.createElement("p");
-  el.appendChild(document.createTextNode("Test"));
+  var el = document.createElement('p');
+  el.appendChild(document.createTextNode('Test'));
 
-  var el2 = document.createElement("p");
-  el2.appendChild(document.createTextNode("Test"));
+  var el2 = document.createElement('p');
+  el2.appendChild(document.createTextNode('Test'));
 
-  var div = document.createElement("div");
+  var div = document.createElement('div');
   div.appendChild(el);
   div.appendChild(el2);
 
