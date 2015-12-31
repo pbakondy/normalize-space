@@ -1,8 +1,9 @@
 {
   "name": "normalize-space",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converts anything to string with normalized form. JavaScript equivalent of XSLT normalize-space()",
   "main": "index.js",
+  "browser": "./browser/index.js",
   "scripts": {
     "test": "node test.js"
   },
