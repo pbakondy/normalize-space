@@ -2,20 +2,22 @@
 
   'use strict';
 
+  function getTextContent(value) {
+    return value.textContent;
+  }
+
   function convertToString(value) {
     if (typeof value === 'string') {
       return value;
     }
 
     if (typeof value === 'object' && typeof Node === 'function' && value instanceof Node) {
-      return value.textContent;
+      return getTextContent(value);
     }
 
     if (typeof value === 'object' && typeof NodeList === 'function' && value instanceof NodeList) {
       var nodeArray = Array.prototype.slice.call(value);
-      var ret = '';
-      nodeArray.map(function(val) { ret += val.textContent + ' '; });
-      return ret;
+      return nodeArray.map(getTextContent).join(' ');
     }
 
     return String(value);
